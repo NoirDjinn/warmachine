@@ -1,15 +1,14 @@
 package kyu6;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class FindTheParityOutlier {
     static int find(int[] integers) {
-        int firstThreeRemainders = integers[0] % 2 + integers[1] % 2 + integers[2] % 2;
-        int outlierRemainder = firstThreeRemainders < 2 ? 1 : 0;
+        List<Integer> evens = Arrays.stream(integers).filter(i -> i % 2 == 0).boxed().collect(Collectors.toList());
+        List<Integer> odds = Arrays.stream(integers).filter(i -> i % 2 != 0).boxed().collect(Collectors.toList());
 
-        for (int i = 0; i < integers.length; i++) {
-            if (integers[i] % 2 == outlierRemainder) {
-                return integers[i];
-            }
-        }
-        return -1;
+        return evens.size() == 1 ? evens.get(0) : odds.get(0);
     }
 }
