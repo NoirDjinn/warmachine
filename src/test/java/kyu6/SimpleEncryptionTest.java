@@ -17,11 +17,13 @@ public class SimpleEncryptionTest {
         assertEquals("hskt svr neetn!Ti aai eyitrsig", SimpleEncryption.encrypt("This kata is very interesting!", 1));
     }
 
-    /*
+
     @Test
     public void testDecrypt() {
         // assertEquals("expected", "actual");
         assertEquals("This is a test!", SimpleEncryption.decrypt("This is a test!", 0));
+        assertEquals("1234", SimpleEncryption.decrypt("2413", 1));
+        assertEquals("12345", SimpleEncryption.decrypt("24135", 1));
         assertEquals("This is a test!", SimpleEncryption.decrypt("hsi  etTi sats!", 1));
         assertEquals("This is a test!", SimpleEncryption.decrypt("s eT ashi tist!", 2));
         assertEquals("This is a test!", SimpleEncryption.decrypt(" Tah itse sits!", 3));
@@ -38,6 +40,6 @@ public class SimpleEncryptionTest {
         assertEquals(null, SimpleEncryption.encrypt(null, 0));
         assertEquals(null, SimpleEncryption.decrypt(null, 0));
     }
-    */
+
 
 }
