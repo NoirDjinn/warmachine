@@ -7,9 +7,10 @@ import java.util.Arrays;
 import static org.junit.Assert.*;
 
 public class PaginationHelperTest {
-    private final PaginationHelper<Character> helper = new PaginationHelper<>(Arrays.asList('a','b','c','d','e','f'),4);
+    private final PaginationHelper<Character> helper = new PaginationHelper<>(Arrays.asList('a', 'b', 'c', 'd', 'e', 'f'), 4);
+
     @Test
-    public void testSomething(){
+    public void testSomething() {
         assertEquals(2, helper.pageCount());
         assertEquals(6, helper.itemCount());
         assertEquals(4, helper.pageItemCount(0));

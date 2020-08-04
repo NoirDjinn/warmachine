@@ -52,7 +52,7 @@ public class PaginationHelper<I> {
     public int pageIndex(int itemIndex) {
         if (itemIndex < 0 || itemIndex > this.collection.size() - 1) {
             return -1;
-        } else if (itemIndex != 0){
+        } else if (itemIndex != 0) {
             return (itemIndex / this.pageSize) + (itemIndex % this.pageSize > 0 ? 1 : 0) - 1;
         } else {
             return 0;
